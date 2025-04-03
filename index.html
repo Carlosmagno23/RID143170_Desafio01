@@ -19,10 +19,9 @@
         </div>
     </nav>
 
-    <div class="container text-center my-5" id="texto-principal">
-        <h2 class="fw-bold" id="titulo-inicial">Descubra Mais com Precisão: <br>
-                            Previsões do Tempo e endereços em tempo real.</h2>
-                            <img src="/img/nuvens.svg" id="nuvemsol">
+    <div class="container text-center my-5">
+        <h2 class="fw-bold">Descubra Mais com Precisão: <br>
+            Previsões do Tempo e endereços em tempo real.<img src="/img/nuvens.svg" id="nuvemsol"></h2>
         
     </div>
 
@@ -31,11 +30,12 @@
             <form id="DadosdeInput">
                 <div class="mb-3">
                     <label class="form-label" for="NomeInput">Primeiro Nome:</label>
-                    <input type="text" class="form-control" placeholder="Insira seu primeiro nome">
+                    <input type="text" class="form-control" id="NomeInput" placeholder="Insira seu primeiro nome">
+                    <small class="text-danger d-none" id="erroNome">Por favor, insira seu nome.</small>
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="EmailInput">E-mail:</label>
-                    <input type="email" class="form-control" placeholder="Insira seu e-mail">
+                    <input type="email" class="form-control" id="EmailInput" placeholder="Insira seu e-mail">
                 </div>
                 <div class="mb-3">
                     <label class="form-label" for="CepInput">Digite o CEP:</label>
@@ -47,6 +47,7 @@
                         <input type="text" class="form-control" id="latitudeInput" placeholder="Latitude">
                         <input type="text" class="form-control" id="longitudeInput" placeholder="Longitude">
                     </div>
+                    <small class="text-danger d-none" id="erroLatLong">Latitude e Longitude inválidas.</small>
                 </div>
                 <button type="submit" class="btn btn-primary w-100 shadow-lg">Acessar</button>
             </form>
@@ -55,7 +56,6 @@
 
     <div class="container my-5">
         <h4 class="fw-bold text-center">Resultado da busca por CEP:<img src="/img/localization.svg"></h4>
-        
         <table class="table table-bordered mt-3 text-center">
             <thead class="table-primary">
                 <tr>
@@ -76,15 +76,17 @@
 
     <div class="container my-5 text-center">
         <h4 class="fw-bold">Previsão do tempo na região:<img src="nuven.svg"></h4>
-        <div class="weather-box p-3 rounded">
+        <div class="weather-box p-3 bg-white border border-primary rounded-5">
             <p id="TempoResultado">Previsão do tempo de acordo com a região: --°C</p>
         </div>
+        
     </div>
 
-    <footer class="bg-primary text-white  py-3">
+    <footer class="bg-primary text-white py-3">
         <p class="text-end me-4">Termos de Uso | Política de Privacidade</p>
     </footer>
 
     <script src="script.js"></script>
+
 </body>
 </html>
